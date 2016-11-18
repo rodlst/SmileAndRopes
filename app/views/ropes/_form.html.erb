@@ -1,0 +1,27 @@
+<%= form_for(rope) do |f| %>
+  <% if rope.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rope.errors.count, "error") %> prohibited this rope from being saved:</h2>
+
+      <ul>
+      <% rope.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Name %>
+    <%= f.text_field :Name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Rope %>
+    <%= f.text_area :Rope %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

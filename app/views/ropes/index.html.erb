@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<div class="disconnect_link">
+  <%= link_to 'Disconnect',destroy_user_session_path, method: :delete %>
+</div>
+<h1>ROPES</h1>
+<div class="tableau">
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Rope</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ropes.each do |rope| %>
+      <tr>
+        <td style="width: 80px"><%= rope.Name %></td>
+        <td style="width: 450px"><%= rope.Rope %></td>
+        <td><%= link_to 'Show', rope %></td>
+        <td><%= link_to 'Edit', edit_rope_path(rope) %></td>
+        <td><%= link_to 'Destroy', rope, method: :delete, data: { confirm: 'Are you sure ?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>
+<div class="new_rope_link">
+<%= link_to 'New Rope', new_rope_path, style: 'vertical-align:center;color:white;'%>
+</div>

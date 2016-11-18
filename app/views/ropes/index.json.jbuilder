@@ -1,0 +1,1 @@
+json.array! @ropes, partial: 'ropes/rope', as: :rope

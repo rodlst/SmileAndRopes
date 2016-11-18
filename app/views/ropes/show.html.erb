@@ -1,0 +1,21 @@
+<div class="disconnect_link">
+  <%= link_to 'Disconnect',destroy_user_session_path, method: :delete %>
+</div>
+<p id="notice"><%= notice %></p>
+
+<div class="showing">
+<p>
+  <strong>Name:</strong>
+  <%= @rope.Name %>
+</p>
+
+<p>
+  <strong>Rope:</strong>
+  "<em><%= @rope.Rope %></em>"
+</p>
+</div>
+
+<div class="edit_links">
+<div class="edit_link"><%= link_to 'Edit', edit_rope_path(@rope) %></div>
+<div class="back_link"><%= link_to 'Back', ropes_path %></div>
+</div>

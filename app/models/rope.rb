@@ -1,0 +1,2 @@
+class Rope < ApplicationRecord
+end

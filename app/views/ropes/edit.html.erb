@@ -1,0 +1,13 @@
+<div class="disconnect_link">
+  <%= link_to 'Disconnect',destroy_user_session_path, method: :delete %>
+</div>
+<h1>Editing Rope</h1>
+
+<div class="editing">
+<%= render 'form', rope: @rope %>
+</div>
+
+<div class="edit_links">
+  <div class="show_link"><%= link_to 'Show', @rope %></div>
+  <div class="back_link"><%= link_to 'Back', ropes_path %></div>
+</div>

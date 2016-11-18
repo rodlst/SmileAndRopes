@@ -1,0 +1,1 @@
+json.partial! "ropes/rope", rope: @rope
