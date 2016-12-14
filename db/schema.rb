@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20161205141701) do
   enable_extension "plpgsql"
 
   create_table "ratings", force: :cascade do |t|
-    t.integer "rating", in: 1..4
+    t.integer  "rating"
     t.integer  "rope_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
