@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161107163032) do
+ActiveRecord::Schema.define(version: 20161205141701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "ratings", force: :cascade do |t|
+    t.integer  "rating"
+    t.integer  "rope_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["rope_id"], name: "index_ratings_on_rope_id", using: :btree
+  end
 
   create_table "ropes", force: :cascade do |t|
     t.string   "Name"
@@ -39,4 +47,5 @@ ActiveRecord::Schema.define(version: 20161107163032) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "ratings", "ropes"
 end
