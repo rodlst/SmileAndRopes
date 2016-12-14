@@ -1,23 +1,23 @@
-<h1>SMILE</h1>
+<body class="connect">
+  <h1>SMILE</h1>
 
 
-<h2 class="log_in_page">Connectez vous</h2>
 <div class="log_in_page_body">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, style: 'font-family: Oswald, sans-serif' %><br />
     <%= f.email_field :email, placeholder: 'Email', autofocus: true, style: 'text-align: center', class: 'champs' %>
   </div>
 
   <div class="field">
-    <%= f.label :Mot_de_passe %><br />
-    <%= f.password_field :password, autocomplete: "off", placeholder: 'Mot de Passe', style: 'text-align: center', class: 'champs'%>
+    <%= f.label :Mot_de_passe, style: 'font-family: Oswald, sans-serif' %><br />
+    <%= f.password_field :password, autocomplete: "off", placeholder: 'Mot de passe', style: 'text-align: center', class: 'champs'%>
   </div>
 
   <% if devise_mapping.rememberable? -%>
     <div class="field">
       <%= f.check_box :remember_me %>
-      <%= f.label :Se_souvenir_de_moi %>
+      <%= f.label :Se_souvenir_de_moi, style: 'font-family: Oswald, sans-serif' %>
     </div>
   <% end -%>
 </div>
@@ -27,3 +27,5 @@
 <% end %>
 
 <div class="down_links"><%= render "devise/shared/links" %></div>
+
+</body>
