@@ -7,27 +7,27 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :Email %><br />
-    <%= f.email_field :email, autofocus: true, placeholder: 'Email', style: 'text-align: center' class: 'champs' %>
+    <%= f.label :Email, style: 'font-family: Oswald, sans-serif' %><br />
+    <%= f.email_field :email, autofocus: true, placeholder: 'Email', style: 'text-align: center', class: 'champs' %>
   </div>
 
   <div class="field">
-    <%= f.label :Mot_de_passe %>
+    <%= f.label :Mot_de_passe, style: 'font-family: Oswald, sans-serif' %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> charactères minimum)</em>
+    (<%= @minimum_password_length %> charactères minimum)
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off", placeholder: 'Mot de passe', style: 'text-align: center' class: 'champs' %>
+    <%= f.password_field :password, autocomplete: "off", placeholder: 'Mot de passe', style: 'text-align: center', class: 'champs' %>
   </div>
 
   <div class="field">
-    <%= f.label :Confirmez_votre_mot_de_passe %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Confirmation', style: 'text-align: center' class: 'champs' %>
+    <%= f.label :Confirmez_votre_mot_de_passe, style: 'font-family: Oswald, sans-serif'%><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Confirmation', style: 'text-align: center', class: 'champs' %>
   </div>
 </div>
 
-  <div class="actions">
-    <%= f.submit "S'inscrire" %>
-  </div>
+
+    <%= f.submit "S'inscrire", class: 'actions' %>
+
 <% end %>
 
 <div class="down_links"><%= render "devise/shared/links" %></div>

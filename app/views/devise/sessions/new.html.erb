@@ -16,14 +16,13 @@
 
   <% if devise_mapping.rememberable? -%>
     <div class="field">
-      <%= f.check_box :remember_me %>
+      <%= f.check_box :remember_me, class: 'checkbox' %>
       <%= f.label :Se_souvenir_de_moi, style: 'font-family: Oswald, sans-serif' %>
     </div>
   <% end -%>
 </div>
-  <div class="actions">
-    <%= f.submit "Connexion" %>
-  </div>
+
+    <%= f.submit "Connexion", class: 'actions' %>
 <% end %>
 
 <div class="down_links"><%= render "devise/shared/links" %></div>
