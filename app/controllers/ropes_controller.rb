@@ -28,7 +28,7 @@ class RopesController < ApplicationController
 
     respond_to do |format|
       if @rope.save
-        format.html { redirect_to @rope, notice: 'Rope was successfully created.' }
+        format.html { redirect_to @rope, notice: 'Vous avez créé une corde.' }
         format.json { render :show, status: :created, location: @rope }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class RopesController < ApplicationController
   def update
     respond_to do |format|
       if @rope.update(rope_params)
-        format.html { redirect_to @rope, notice: 'Rope was successfully updated.' }
+        format.html { redirect_to @rope, notice: 'La corde a été modifiée.' }
         format.json { render :show, status: :ok, location: @rope }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class RopesController < ApplicationController
   def destroy
     @rope.destroy
     respond_to do |format|
-      format.html { redirect_to ropes_url, notice: 'Rope was successfully destroyed.' }
+      format.html { redirect_to ropes_url, notice: 'La corde a été coupée.' }
       format.json { head :no_content }
     end
   end

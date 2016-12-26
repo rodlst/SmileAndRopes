@@ -1,7 +1,10 @@
+
+<body class="ropes">
 <div class="disconnect_link">
-  <%= link_to 'Disconnect',destroy_user_session_path, method: :delete %>
+  <%= link_to image_tag("out.png", style:'height: 30px;'), destroy_user_session_path, method: :delete %>
 </div>
-<h1>New Rope</h1>
+<h1 class="spaced">Nouvelle corde</h1>
 <div class="newr"><%= render 'form', rope: @rope %></div>
 
 <div class="back"><%= link_to 'Back', ropes_path %></div>
+</div>

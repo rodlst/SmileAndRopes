@@ -12,16 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :Name %>
-    <%= f.text_field :Name %>
+    <%= f.label :Nom, style: 'font-family: Oswald, sans-serif; color: white; padding-bottom: 10px;'  %>
+    <%= f.text_field :Name, style: 'text-align: center', class: 'champs', autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :Rope %>
-    <%= f.text_area :Rope %>
+    <%= f.label :Corde, style: 'font-family: Oswald, sans-serif; color: white; padding-bottom: 10px;' %>
+    <%= f.text_area :Rope, style: 'height: 100px; width: 400px;', class: 'champs', autofocus: true %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+<div class="option">
+    <%= f.submit 'Tendre une corde', class:'create' %>
   </div>
+
 <% end %>
